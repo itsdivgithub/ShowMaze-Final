@@ -109,7 +109,7 @@ const Home: NextPageProps = () => {
                     <div className="hero-content flex flex-col">
                         <h1 style={{ fontSize: '4rem', fontWeight: 'bold' }}>Welcome to ShowMaze-IndiaXNear</h1>
                         <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>
-                            Your best cultural shows booking partner.
+                            Your best Indian cultural shows booking partner.
                         </p>
                         <video src="/culture.mp4" controls autoPlay width="40%" height="40%"></video>
                         <button onClick={login} type="button" className="btn btn-warning btn-active btn-lg">
