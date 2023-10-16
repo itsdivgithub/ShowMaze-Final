@@ -21,11 +21,11 @@ function TicketCard({ ticket, onBuyTicket }: TicketCardProps) {
         <div className="overflow-hidden rounded-lg border border-gray-200 shadow-lg">
             <div className="relative">
                 <img src={ticket.image} className="h-56 w-full object-cover" alt="ticket_img" />
-                <div className="absolute top-2 right-2 rounded-md border-black bg-white px-2 py-1">
+                <div className="absolute right-2 top-2 rounded-md border-black bg-white px-2 py-1">
                     <span className="text-black">Sold: {sold}</span>
                 </div>
             </div>
-            <div className="p-4 bg-accent">
+            <div className="bg-accent p-4">
                 <h2 className="text-lg font-semibold">{truncate(ticket.name, { length: 30 })}</h2>
                 <p className="mt-2 text-black">{truncate(ticket.description, { length: 80 })}</p>
                 <div className="mt-2 flex items-center justify-between">
@@ -39,7 +39,7 @@ function TicketCard({ ticket, onBuyTicket }: TicketCardProps) {
                     <button
                         onClick={onBuyTicket}
                         className={clsx(
-                            'w-full rounded-md bg-yellow-600 py-2 px-4 font-semibold text-white focus:outline-none',
+                            'w-full rounded-md bg-yellow-600 px-4 py-2 font-semibold text-white focus:outline-none',
                             {
                                 'cursor-not-allowed opacity-50': !remaining,
                             },
