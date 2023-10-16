@@ -82,6 +82,7 @@ const Home: NextPageProps = () => {
                             <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>
                                 Your best Indian cultural shows booking partner.
                             </p>
+                            <video src="/culture.mp4" controls autoPlay width="40%" height="40%"></video>
                             <button
                                 onClick={handleOpenAddTicketModal}
                                 type="button"
