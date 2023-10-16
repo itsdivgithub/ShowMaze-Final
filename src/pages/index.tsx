@@ -75,13 +75,13 @@ const Home: NextPageProps = () => {
                 <title>{ROUTERS.HOME.title}</title>
             </Head>
 
-            <div className="bg-accent hero min-h-full">
+            <div className="hero min-h-full bg-accent">
                 <div className="img hero min-h-screen">
                     <img src="/culture.png" alt="image"></img>
                 </div>
                 <div className="hero-content flex flex-col">
                     <h1 style={{ fontSize: '4rem', fontWeight: 'bold' }}>Welcome to ShowMaze-IndiaXNear</h1>
-                    <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>Your best Indain cultural shows booking partner.</p>
+                    <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>Your best cultural shows booking partner.</p>
 
                     {account ? (
                         <>
