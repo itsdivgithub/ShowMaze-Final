@@ -74,17 +74,14 @@ const Home: NextPageProps = () => {
             <Head>
                 <title>{ROUTERS.HOME.title}</title>
             </Head>
-
-            <div className="hero min-h-full bg-accent">
-                <div className="img hero min-h-screen">
-                    <img src="/culture.png" alt="image"></img>
-                </div>
-                <div className="hero-content flex flex-col">
-                    <h1 style={{ fontSize: '4rem', fontWeight: 'bold' }}>Welcome to ShowMaze-IndiaXNear</h1>
-                    <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>Your best cultural shows booking partner.</p>
-
-                    {account ? (
-                        <>
+            {account ? (
+                <>
+                    <div className="hero min-h-full bg-accent">
+                        <div className="hero-content flex flex-col">
+                            <h1 style={{ fontSize: '4rem', fontWeight: 'bold' }}>Welcome to ShowMaze-IndiaXNear</h1>
+                            <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>
+                                Your best Indian cultural shows booking partner.
+                            </p>
                             <button
                                 onClick={handleOpenAddTicketModal}
                                 type="button"
@@ -101,14 +98,25 @@ const Home: NextPageProps = () => {
                                     />
                                 ))}
                             </div>
-                        </>
-                    ) : (
+                        </div>
+                    </div>
+                </>
+            ) : (
+                <div className="hero min-h-full bg-accent">
+                    <div className="img hero min-h-screen">
+                        <img src="/culture.png" alt="image"></img>
+                    </div>
+                    <div className="hero-content flex flex-col">
+                        <h1 style={{ fontSize: '4rem', fontWeight: 'bold' }}>Welcome to ShowMaze-IndiaXNear</h1>
+                        <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>
+                            Your best cultural shows booking partner.
+                        </p>
                         <button onClick={login} type="button" className="btn btn-warning btn-active btn-lg">
                             Connect Near Wallet
                         </button>
-                    )}
+                    </div>
                 </div>
-            </div>
+            )}
 
             <AddTicket
                 open={openAddTicket}
